@@ -1,21 +1,232 @@
-html {
-    padding: 0;
+:root {
+  --accent: #0077b5;
+}
+
+h2 {
+  color: var(--accent);
+}
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    display: flex;
+    background: #f9fafb;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1;
 }
 
-nav {
+.parent-container {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "about about"
+    "left-content right-content"
+    "contact contact"
+    "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about, .contact {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.left-content, .right-content {
+  background: #fefefe;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .parent-container {
+    grid-template-areas: 
+      "header"
+      "about"
+      "left-content"
+      "right-content"
+      "contact"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .parent-container > div {
     width: 100%;
+  }
+}
+
+.parent-container > div.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.parent-container > div.about {
+    grid-area: about;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
 }
 
-nav li {
-    display: flex;
-    gap: 1rem
+.about-text {
+    flex: 1;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+
+  .profile-pic {
+    margin-top: 1rem;
+    align-self: center;
+  }
+}
+
+.parent-container > div.left-content {
+    grid-area: left-content;
+    line-height: 1.5;
+}
+
+.projects {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.parent-container > div.right-content {
+    grid-area: right-content;
+    text-align: center;
+}
+
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tech-container img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3 ease;
+}
+
+.tech-container img:hover {
+    transform: scale(1.1);
+}
+
+.parent-container > div.footer {
+    grid-area: footer;
+}
+
+.parent-container > .contact {
+  grid-area: contact;
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact p {
+    margin-top: 0.5rem;
+}
+
+.contact ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact li {
+  margin: 0.5rem 0;
+}
+
+.contact a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-icons {
+  margin-top: 0.75rem;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: #333;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.contact-icons a + a {
+  margin-left: 0.75rem;
+}
+
+.contact-icons a:hover .icon {
+  transform: translateY(-2px) scale(1.05);
+  color: #0077b5;
+}
+
+.contact-icons a:focus {
+  outline: 3px solid rgba(0, 119, 181, 0.18);
+  border-radius: 6px;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
 }
 
