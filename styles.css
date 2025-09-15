@@ -21,11 +21,13 @@ body {
 
 .parent-container {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "header header"
     "about about"
     "left-content right-content"
+    "timeline timeline"
     "contact contact"
+    "heatmap heatmap"
     "footer footer";
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -50,7 +52,9 @@ body {
       "about"
       "left-content"
       "right-content"
+      "timeline"
       "contact"
+      "heatmap"
       "footer";
     grid-template-columns: 1fr;
   }
@@ -58,11 +62,16 @@ body {
   .parent-container > div {
     width: 100%;
   }
+
 }
 
 .parent-container > div.header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .name {
@@ -92,6 +101,10 @@ body {
 
 .about-text {
     flex: 1;
+}
+
+.about-text p {
+  margin-top: 0.5rem;
 }
 
 .profile-pic {
@@ -156,17 +169,102 @@ body {
 }
 
 .tech-container img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     transition: transform 0.3 ease;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    
 }
 
 .tech-container img:hover {
     transform: scale(1.1);
 }
 
-.parent-container > div.footer {
-    grid-area: footer;
+.tech-category {
+  margin-bottom: 1.5rem;
+}
+
+.tech-category h3 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+}
+
+
+.parent-container > .timeline {
+  grid-area: timeline;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 24px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--accent);
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+  z-index: 10;
+  pointer-events: auto;
+  outline: none;
+}
+
+.timeline-item .timeline-dot { opacity: 0; transform: scale(0.6); }
+.timeline-item.show .timeline-dot { opacity: 1; transform: scale(1); }
+
+.timeline-dot:hover,
+.timeline-dot:focus {
+  transform: scale(1.35);
+  background: #005582;
+  box-shadow: 0 0 0 6px rgba(0,87,139,0.12);
+}
+
+.timeline-content {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .parent-container > .contact {
@@ -179,7 +277,7 @@ body {
 }
 
 .contact p {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .contact ul {
@@ -217,9 +315,20 @@ body {
   color: #0077b5;
 }
 
+.contact-icons a[aria-label="Instagram"]:hover .icon {
+  transform: translateY(-2px) scale(1.05);
+  color: #E1306C;
+}
+
 .contact-icons a:focus {
   outline: 3px solid rgba(0, 119, 181, 0.18);
   border-radius: 6px;
+}
+
+.parent-container > div.footer {
+    grid-area: footer;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .footer {
