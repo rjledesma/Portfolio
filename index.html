@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cal-heatmap@4.2.4/cal-heatmap.css">
   <title>Portfolio</title>
   <script src="app.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/cal-heatmap@4.2.4/cal-heatmap.min.js" defer></script>
 </head>
+
 <body>
   <div class="parent-container">
     <div class="header">
@@ -16,64 +20,65 @@
     </div>
 
     <div class="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About me</h2>
-                <p>
-                    I’m a developer passionate about building practical AI solutions, 
-                    full-stack web apps, and data-driven tools. I love turning ideas into 
-                    working products that solve real-world problems.
-                </p>
-            </div>
-            <img class="profile-pic" src="./assets/profile-pic.webp" alt="profile-pic">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About me</h2>
+          <p>
+            I’m a developer passionate about building practical AI solutions,
+            full-stack web apps, and data-driven tools. I love turning ideas into
+            working products that solve real-world problems.
+          </p>
         </div>
+        <img class="profile-pic" src="./assets/profile-pic.webp" alt="profile-pic">
+      </div>
     </div>
 
     <div class="right-content">
-  <h2>Tech Stacks</h2>
+      <h2>Tech Stacks</h2>
 
-  <div class="tech-category">
-    <h3>Languages</h3>
-    <div class="tech-container">
-      <img src="./assets/javascript.svg" alt="Javascript">
-      <img src="./assets/java.svg" alt="Java">
-      <img src="./assets/c-plusplus.svg" alt="C++">
-    </div>
-  </div>
+      <div class="tech-category">
+        <h3>Languages</h3>
+        <div class="tech-container">
+          <img src="./assets/javascript.svg" alt="Javascript">
+          <img src="./assets/java.svg" alt="Java">
+          <img src="./assets/c-plusplus.svg" alt="C++">
+          <img src="./assets/python.svg" alt="python">
+        </div>
+      </div>
 
-  <div class="tech-category">
-    <h3>Frameworks</h3>
-    <div class="tech-container">
-      <img src="./assets/react.svg" alt="React">
-      <img src="./assets/nodejs-icon.svg" alt="Node.js">
-    </div>
-  </div>
+      <div class="tech-category">
+        <h3>Frameworks</h3>
+        <div class="tech-container">
+          <img src="./assets/react.svg" alt="React">
+          <img src="./assets/nodejs-icon.svg" alt="Node.js">
+        </div>
+      </div>
 
-  <div class="tech-category">
-    <h3>Databases</h3>
-    <div class="tech-container">
-      <img src="./assets/mysql.svg" alt="MySQL">
-      <img src="./assets/firebase-icon.svg" alt="Firebase">
-    </div>
-  </div>
+      <div class="tech-category">
+        <h3>Databases</h3>
+        <div class="tech-container">
+          <img src="./assets/mysql.svg" alt="MySQL">
+          <img src="./assets/firebase-icon.svg" alt="Firebase">
+        </div>
+      </div>
 
-  <div class="tech-category">
-      <h3>AI / ML</h3>
-      <div class="tech-container">
-        <img src="./assets/tensorflow.svg" alt="Tensorflow">
-        <img src="./assets/pandas-icon.svg" alt="Pandas">
-        <img src="./assets/matplotlib.svg" alt="Matplotlib">
-        <img src="./assets/hugging-face-icon.svg" alt="Hugging Face">
+      <div class="tech-category">
+        <h3>AI / ML</h3>
+        <div class="tech-container">
+          <img src="./assets/tensorflow.svg" alt="Tensorflow">
+          <img src="./assets/pandas-icon.svg" alt="Pandas">
+          <img src="./assets/matplotlib.svg" alt="Matplotlib">
+          <img src="./assets/hugging-face-icon.svg" alt="Hugging Face">
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3>Tools</h3>
+        <div class="tech-container">
+          <img src="./assets/git-icon.svg" alt="Git">
+        </div>
       </div>
     </div>
-
-    <div class="tech-category">
-      <h3>Tools</h3>
-      <div class="tech-container">
-        <img src="./assets/git-icon.svg" alt="Git">
-      </div>
-    </div>
-  </div>
 
     <div class="left-content">
       <h2>Featured Projects</h2>
@@ -95,89 +100,6 @@
           <p>AI mapping for agriculture.</p>
         </div>
       </div>
-    </div>
-
-    <div class="contact">
-    <h2>Contact</h2>
-    <p>If you’d like to collaborate or have a question, feel free to reach out:</p>
-    <ul>
-        <li>Email: <a href="mailto:rjledesma0221@gmail.com">rjledesma0221@gmail.com</a></li>
-        <li>Contact No: <a>09922189955</a></li>
-    </ul>
-
-    <div class="contact-icons">
-
-        <a href="https://github.com/rjledesma" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
-                <title>GitHub</title>
-                <path fill="currentColor"
-                d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.09-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99 0 1.98.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.75.8 1.2 1.83 1.2 3.09 0 4.43-2.69 5.41-5.25 5.7.42.36.8 1.08.8 2.18 0 1.57-.01 2.83-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/>
-            </svg>
-        </a>
-
-
-        <a href="https://linkedin.com/in/rj-ledesma-9579292b9/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
-                <title>LinkedIn</title>
-                <path fill="currentColor"
-                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.27 2.31-2.2 3.77-2.2 4.03 0 4.77 2.65 4.77 6.09V24H17v-7.5c0-1.79-.03-4.09-2.5-4.09-2.5 0-2.88 1.95-2.88 3.98V24H8V8z"/>
-            </svg>
-        </a>
-
-        <a href="https://facebook.com/Senpai.Tsuyoshi/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
-            <title>Facebook</title>
-            <path fill="currentColor"
-              d="M22.675 0h-21.35C.597 0 0 
-              .597 0 1.333v21.333C0 23.403.597 
-              24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 
-              1.894-4.788 4.659-4.788 1.325 0 2.463.099 
-              2.794.143v3.24l-1.918.001c-1.504 
-              0-1.797.715-1.797 1.764v2.313h3.587l-.467 
-              3.622h-3.12V24h6.116c.728 
-              0 1.325-.597 1.325-1.334V1.333C24 
-              .597 23.403 0 22.675 0z"/>
-          </svg>
-        </a>
-
-        <a href="https://instagram.com/the_skatez_boy" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
-            <title>Instagram</title>
-            <path fill="currentColor"
-              d="M12 2.163c3.204 0 3.584.012 
-              4.85.07 1.366.062 2.633.334 
-              3.608 1.31.975.975 1.248 
-              2.242 1.31 3.608.058 1.266.069 
-              1.646.069 4.849s-.012 3.584-.07 
-              4.85c-.062 1.366-.334 2.633-1.31 
-              3.608-.975.975-2.242 1.248-3.608 
-              1.31-1.266.058-1.646.069-4.85.069s-3.584-.012-4.849-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 
-              15.747 2.163 15.367 2.163 
-              12s.012-3.584.07-4.849c.062-1.366.334-2.633 
-              1.31-3.608.975-.975 2.242-1.248 
-              3.608-1.31C8.416 2.175 8.796 2.163 
-              12 2.163zm0 1.684c-3.17 
-              0-3.548.012-4.795.07-1.042.048-1.61.218-1.986.364-.5.194-.86.426-1.236.802-.376.376-.608.736-.802 
-              1.236-.146.376-.316.944-.364 
-              1.986-.058 1.247-.07 1.624-.07 
-              4.795s.012 3.548.07 4.795c.048 1.042.218 
-              1.61.364 1.986.194.5.426.86.802 
-              1.236.376.376.736.608 1.236.802.376.146.944.316 
-              1.986.364 1.247.058 1.624.07 
-              4.795.07s3.548-.012 4.795-.07c1.042-.048 
-              1.61-.218 1.986-.364.5-.194.86-.426 
-              1.236-.802.376-.376.608-.736.802-1.236.146-.376.316-.944.364-1.986.058-1.247.07-1.624.07-4.795s-.012-3.548-.07-4.795c-.048-1.042-.218-1.61-.364-1.986-.194-.5-.426-.86-.802-1.236-.376-.376-.736-.608-1.236-.802-.376-.146-.944-.316-1.986-.364-1.247-.058-1.624-.07-4.795-.07zm0 
-              3.89a5.947 5.947 0 1 0 0 11.895 5.947 
-              5.947 0 0 0 0-11.895zm0 9.803a3.856 
-              3.856 0 1 1 0-7.712 3.856 
-              3.856 0 0 1 0 7.712zm6.406-10.845a1.386 
-              1.386 0 1 1-2.772 0 1.386 
-              1.386 0 0 1 2.772 0z"/>
-          </svg>
-        </a>
-
-        </div>
-
     </div>
 
     <div class="timeline">
@@ -212,16 +134,104 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3>2021</h3>
-            <p>Graduated from Antique National School with Honors in the STE Program  🎓</p>
+            <p>Graduated from Antique National School with Honors in the STE Program 🎓</p>
           </div>
         </div>
 
       </div>
     </div>
 
+    <div class="heatmap">
+      <div class="heatmap-container">
+        <h2>My Contributions</h2>
+        <div class="heatmap-grid" id="heatmap-grid"></div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to collaborate or have a question, feel free to reach out:</p>
+      <ul>
+        <li>Email: <a href="mailto:rjledesma0221@gmail.com">rjledesma0221@gmail.com</a></li>
+        <li>Contact No: <a>09922189955</a></li>
+      </ul>
+
+      <div class="contact-icons">
+
+        <a href="https://github.com/rjledesma" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
+            <title>GitHub</title>
+            <path fill="currentColor"
+              d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.09-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99 0 1.98.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.75.8 1.2 1.83 1.2 3.09 0 4.43-2.69 5.41-5.25 5.7.42.36.8 1.08.8 2.18 0 1.57-.01 2.83-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+          </svg>
+        </a>
+
+
+        <a href="https://linkedin.com/in/rj-ledesma-9579292b9/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
+            <title>LinkedIn</title>
+            <path fill="currentColor"
+              d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.27 2.31-2.2 3.77-2.2 4.03 0 4.77 2.65 4.77 6.09V24H17v-7.5c0-1.79-.03-4.09-2.5-4.09-2.5 0-2.88 1.95-2.88 3.98V24H8V8z" />
+          </svg>
+        </a>
+
+        <a href="https://facebook.com/Senpai.Tsuyoshi/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
+            <title>Facebook</title>
+            <path fill="currentColor" d="M22.675 0h-21.35C.597 0 0 
+              .597 0 1.333v21.333C0 23.403.597 
+              24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 
+              1.894-4.788 4.659-4.788 1.325 0 2.463.099 
+              2.794.143v3.24l-1.918.001c-1.504 
+              0-1.797.715-1.797 1.764v2.313h3.587l-.467 
+              3.622h-3.12V24h6.116c.728 
+              0 1.325-.597 1.325-1.334V1.333C24 
+              .597 23.403 0 22.675 0z" />
+          </svg>
+        </a>
+
+        <a href="https://instagram.com/the_skatez_boy" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
+            <title>Instagram</title>
+            <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 
+              4.85.07 1.366.062 2.633.334 
+              3.608 1.31.975.975 1.248 
+              2.242 1.31 3.608.058 1.266.069 
+              1.646.069 4.849s-.012 3.584-.07 
+              4.85c-.062 1.366-.334 2.633-1.31 
+              3.608-.975.975-2.242 1.248-3.608 
+              1.31-1.266.058-1.646.069-4.85.069s-3.584-.012-4.849-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 
+              15.747 2.163 15.367 2.163 
+              12s.012-3.584.07-4.849c.062-1.366.334-2.633 
+              1.31-3.608.975-.975 2.242-1.248 
+              3.608-1.31C8.416 2.175 8.796 2.163 
+              12 2.163zm0 1.684c-3.17 
+              0-3.548.012-4.795.07-1.042.048-1.61.218-1.986.364-.5.194-.86.426-1.236.802-.376.376-.608.736-.802 
+              1.236-.146.376-.316.944-.364 
+              1.986-.058 1.247-.07 1.624-.07 
+              4.795s.012 3.548.07 4.795c.048 1.042.218 
+              1.61.364 1.986.194.5.426.86.802 
+              1.236.376.376.736.608 1.236.802.376.146.944.316 
+              1.986.364 1.247.058 1.624.07 
+              4.795.07s3.548-.012 4.795-.07c1.042-.048 
+              1.61-.218 1.986-.364.5-.194.86-.426 
+              1.236-.802.376-.376.608-.736.802-1.236.146-.376.316-.944.364-1.986.058-1.247.07-1.624.07-4.795s-.012-3.548-.07-4.795c-.048-1.042-.218-1.61-.364-1.986-.194-.5-.426-.86-.802-1.236-.376-.376-.736-.608-1.236-.802-.376-.146-.944-.316-1.986-.364-1.247-.058-1.624-.07-4.795-.07zm0 
+              3.89a5.947 5.947 0 1 0 0 11.895 5.947 
+              5.947 0 0 0 0-11.895zm0 9.803a3.856 
+              3.856 0 1 1 0-7.712 3.856 
+              3.856 0 0 1 0 7.712zm6.406-10.845a1.386 
+              1.386 0 1 1-2.772 0 1.386 
+              1.386 0 0 1 2.772 0z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+
     <div class="footer">
       <p>© 2025 Reginald Ledesma | Built with ❤️ using HTML & CSS</p>
     </div>
   </div>
 </body>
+
 </html>
