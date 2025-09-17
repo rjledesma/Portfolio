@@ -98,3 +98,16 @@ function renderGrid() {
 
 renderGrid();
 window.addEventListener("resize", renderGrid);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectCards = document.querySelectorAll(".project-card");
+  projectCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const link = card.getAttribute("data-link");
+      if (link) {
+        window.open(link, "_blank");
+      }
+    });
+    card.style.cursor = "pointer";
+  });
+});
