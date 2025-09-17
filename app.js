@@ -41,28 +41,32 @@ function createSquare(dayIndex) {
   const div = document.createElement("div");
   div.classList.add("square");
 
-  const count = Math.floor(Math.random() * 10);
   const dateLabel = getDateOffset(dayIndex);
+  const count = Math.random() > 0.7 ? Math.floor(Math.random() * 12) : 0;
 
-  const hasContributions = Math.random() > 0.7; 
+  div.dataset.tooltip =
+    count === 0
+      ? `No contributions on ${dateLabel}`
+      : count === 1
+      ? `1 contribution on ${dateLabel}`
+      : `${count} contributions on ${dateLabel}`;
 
-  if (hasContributions) {
-    const count = Math.floor(Math.random() * 10) + 1;
-    div.classList.add("active");
-    div.dataset.tooltip = `${count} contributions on ${dateLabel}`;
-  } else {
-    div.dataset.tooltip = `No contributions on ${dateLabel}`;
-  }
+  const levels = [
+    { max: 0, color: "#ebedf0" },
+    { max: 3, color: "#9be9a8" },
+    { max: 6, color: "#40c463" },
+    { max: 9, color: "#30a14e" },
+    { max: Infinity, color: "#216e39" }
+  ];
 
-  if (Math.random() > 0.7) div.classList.add("active");
+  const level = levels.find(l => count <= l.max);
+  div.style.backgroundColor = level.color;
 
   div.addEventListener("click", () => {
     document.querySelectorAll(".square.show-tooltip")
       .forEach(sq => sq.classList.remove("show-tooltip"));
-
     div.classList.toggle("show-tooltip");
   });
-
 
   return div;
 }
