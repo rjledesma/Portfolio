@@ -111,3 +111,4 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.cursor = "pointer";
   });
 });
+

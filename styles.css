@@ -93,6 +93,18 @@ body {
   text-align: left;
   max-width: 900px;
   margin: 0 auto;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about h2 {
+  border-left: 4px solid var(--accent);
+  padding-left: 0.5rem;
 }
 
 .about-content {
@@ -149,11 +161,19 @@ body {
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: #f9fdf9;
+}
+
+.project-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .parent-container>div.right-content {
